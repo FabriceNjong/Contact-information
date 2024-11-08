@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #d0e7ff; /* Light blue background */
+        }
+
+        /* Button styling */
+        .show-contact-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .show-contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contact information styling */
+        .contact-info {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff; /* White background for contrast */
+            border: 1px solid #007bff;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <!-- Button to toggle contact information -->
+        <button class="show-contact-btn" onclick="toggleContactInfo()">Show Contact Information</button>
+
+        <!-- Hidden contact information -->
+        <div class="contact-info" id="contactInfo">
+            <p><strong>Email:</strong> your.email@example.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for toggling visibility -->
+    <script>
+        function toggleContactInfo() {
+            var contactInfo = document.getElementById('contactInfo');
+            if (contactInfo.style.display === "none" || contactInfo.style.display === "") {
+                contactInfo.style.display = "block";
+            } else {
+                contactInfo.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
